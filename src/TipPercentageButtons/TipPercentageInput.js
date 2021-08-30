@@ -12,12 +12,22 @@ const labelStyle = {
     fontSize: "12px",
     margin: "1em",
     float: "left",
-    width: "1.7em",
-    borderColor: "white"
+    width: "5em",
+    borderColor: "white",
   }
+
+const inputStyle = {
+  width: "5em",
+  marginLeft: "-1.5em",
+  borderStyle: "none",
+  backgroundColor: "#f3f8fb", /* Green */
+  outline: "none"
+}
 
 export const TipPercentageInput = ({label, percentage}) => {
     return (<> 
-    <Field style = {labelStyle} type="number" name="percentTip" id={percentage} value={percentage.custom} placeholder="Custom"/>
+    <div style={labelStyle}> 
+    <Field style={inputStyle} type="text" name="percentTip" id={percentage} value={percentage.custom} placeholder="Custom"/>
+    </div>
     </>)
 }

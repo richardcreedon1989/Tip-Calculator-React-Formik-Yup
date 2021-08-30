@@ -1,0 +1,32 @@
+.billInput {
+    padding-top: 1em;
+}
+
+input {
+    width: 80%;
+    height: 40px;
+    padding: 0 10px;
+    background-color: #F3F8FB;
+    border-style: none;
+    direction: rtl;
+    caret-color: transparent;
+    font-family: 'IBM Plex Sans Arabic';
+    font-size: 25px;
+    font-weight:bolder;
+    color:#154646
+    ;
+}
+
+.billLabel {
+    display: block;
+    margin: 0 0 10px 25px;
+    font-size: 20px;
+    color: #8a9a9a
+    ;
+}
+
+.dollarIcon {
+    position: relative;
+    left: 35px;
+    top: .3em;
+}

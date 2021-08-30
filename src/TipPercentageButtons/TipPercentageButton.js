@@ -12,7 +12,7 @@ const labelStyle = {
     fontSize: "12px",
     margin: "1em",
     float: "left",
-    width: "1.7em",
+    width: "5em",
     fontFamily: "display", 
   }
 
