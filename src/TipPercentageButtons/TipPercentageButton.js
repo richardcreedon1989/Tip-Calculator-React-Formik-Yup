@@ -1,20 +1,8 @@
-import { Formik, Field } from "formik"
-import React, {useState} from "react"
+import { Field } from "formik"
+import React from "react"
+import "./TipPercentageButton.css"
 
-const labelStyle = {
-    backgroundColor: "#4CAF50", /* Green */
-    borderStyle: "solid",
-    color: "white",
-    padding: "1.2em 2.5em",
-    textAlign: "",
-    textDecoration: "none",
-    display: "flex",
-    fontSize: "12px",
-    margin: "1em",
-    float: "left",
-    width: "5em",
-    fontFamily: "display", 
-  }
+
 
 //TODO 
 
@@ -24,7 +12,7 @@ const labelStyle = {
 
 export const TipPercentageButton = ({label, percentage}) => {
     return (<> 
-    <label style = {labelStyle} htmlFor={percentage}>{percentage} </label>
+    <label className="label" htmlFor={percentage}>{percentage}% </label>
     <Field style={{display: "none"}} type="radio" name="percentTip" id={percentage} value={percentage}/>
     </>)
 }

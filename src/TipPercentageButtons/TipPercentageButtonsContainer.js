@@ -1,18 +1,18 @@
 
 import { TipPercentageButton } from "./TipPercentageButton";
 import { TipPercentageInput } from "./TipPercentageInput";
-import "./TipPercentageButtons.css"
+import "./TipPercentageButtonsContainer.css"
 
 // TODO :     Made the button, now must properly style but also figure 
 //out how to get the value of the radio button clicked. 
 //Expecting onSubmit for radio button but need to do it with onClick instead
 
 const percentage = {
-    five: "5%",
-    ten: "10%",
-    fifteen: "15%",
-    twentyFive: "25%",
-    fifty: "fifty",
+    five: 5,
+    ten: 10,
+    fifteen: 15,
+    twentyFive: 25,
+    fifty: 50,
     custom: "custom"
 }
 
@@ -23,12 +23,13 @@ let arrayOfTipInputComponents = [<TipPercentageButton percentage={percentage.fiv
     <TipPercentageButton percentage={percentage.fifty} />,
     <TipPercentageInput percentage={percentage.custom} />]
 
-export const TipPercentageButtons = () => {
+export const TipPercentageButtonsContainer = () => {
     return (
-        <> 
-        {arrayOfTipInputComponents.map((component)=> {
-            return <div>  {component} </div>
-        })}
-    </>
+        <div className="buttonsContainer"> 
+        <h1 className="heading"> Select Tip %</h1>
+            {arrayOfTipInputComponents.map((component)=> {
+                return <> {component} </>
+            })}
+        </div>
     )
 }

@@ -1,29 +1,28 @@
 import React from "react";
 import { Field, ErrorMessage} from "formik"
 import "./BillInput.css"
-import logo from "../assets/icon-dollar.svg"
+import dollarBillIcon from "../assets/icon-dollar.svg"
+import peopleIcon from "../assets/icon-person.svg"
 
-const labelStyle = {
-    backgroundColor: "#4CAF50", /* Green */
-    borderStyle: "solid",
-    color: "white",
-    padding: "15px 32px",
-    textAlign: "center",
-    textDecoration: "none",
-    display: "inlineBlock",
-    fontSize: "16px"
-  }
 
 export const BillInput = (props) => {
     const {values} = props;
+
+    const displayIcon = () => {
+        if(props.label && props.label === "Bill") {
+            return dollarBillIcon
+        } else if(props.label && props.label === "Number Of People") {
+            return peopleIcon
+        } else {
+            return ""
+        }
+    }
+
     return (
-    <div className="billInput">        
-        {values.percentageTip}
-        <label className="billLabel" htmlFor="billAmount" > {props.label} </label>
-        <img className="dollarIcon" src={logo} alt="dollarSign"/>
-
-        <Field style={{marginLeft: "1em"}} type="number" name="billAmount" id="billAmount" placeholder="" /> 
-
-        <ErrorMessage name="billAmount" />
+    <div className="inputContainer"> 
+        <label className="inputLabel" htmlFor={props.value} > {props.label} </label>
+        <img className="icon" src={displayIcon()} alt="dollarSign"/>
+        <Field className="fieldInput" type="number" name={props.value} id={props.value} placeholder="" /> 
+        <ErrorMessage name={props.value} />
     </div>     
     )}                

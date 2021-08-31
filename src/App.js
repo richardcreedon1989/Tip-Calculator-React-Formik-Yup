@@ -1,14 +1,15 @@
 import './App.css';
 import { BillInput} from './BillInput/BillInput';
-import {TipPercentageButtons} from "./TipPercentageButtons/TipPercentageButtons"
 import * as Yup from "yup"
 import {Formik, Form, } from "formik"
 import Header from "./Header/Header"
+import TipAmountDisplayContainer from "./TipAmountDisplayContainer/TipAmountDisplayContainer"
+import { TipPercentageButtonsContainer } from './TipPercentageButtons/TipPercentageButtonsContainer';
 
-const initialValues = {
-  billAmount: "",
-  percentTip: ""
-
+let initialValues = {
+  bill: "",
+  percentTip: "",
+  numberOfPeople: "",
 }
 
 const validationSchema= Yup.object({
@@ -19,7 +20,17 @@ const onSubmit = values => {
   console.log("values", values)
 }
 
-function App() {
+function App(props) {
+
+  const resetValues = () => {
+    return initialValues = {
+      bill: "",
+      percentTip: "",
+      numberOfPeople: "",
+    }
+  }
+  
+
   return (
   <Formik
       initialValues={initialValues}
@@ -31,13 +42,15 @@ function App() {
   <Form> 
     <Header />      
     <div className="container"> 
-      <BillInput values={values} label="Bill"/>
-        {console.log("values", values)}
-      <TipPercentageButtons />
+      <BillInput values={values} label="Bill" value="bill"/>
+      <TipPercentageButtonsContainer />
+      <BillInput values={values} label="Number Of People" value="numberOfPeople"/>
+      <TipAmountDisplayContainer values={values} resetValues={resetValues()}/>
     </div>
+    {console.log("props", props)}
   </Form>
-
-  )}                
+  )}  
+                
   </Formik>
   )}
 
