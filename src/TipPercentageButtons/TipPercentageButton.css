@@ -2,16 +2,16 @@
     background-color: #004749    ;
     border-style: none;
     color:#def8fa;
-    padding: 1em 1em;
+    padding: .5em .5em;
     text-align:center;
     align-items: center;
-    font-size: 20px;
-    margin: .5em;
+    font-size: 30px;
+    margin: .2em;
     float: left;
-    width: 5.6em;
-    height: 15px;
+    width: 4.4em;
+    height: 24px;
     font-family: 'IBM Plex Sans Arabic';
     line-height: .8;
     font-weight: bolder;
-    border-radius: 10px;  
+    border-radius: 5px;  
 }

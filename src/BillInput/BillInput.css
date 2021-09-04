@@ -1,9 +1,10 @@
 .inputContainer {
-    padding-top: 1em;
+    padding-top: 2em;
+    position: relative;
 }
 
 input {
-    width: 80%;
+    width: 75%;
     height: 50px;
     padding: 0 10px;
     background-color: #F3F8FB;
@@ -19,7 +20,7 @@ input {
 .inputLabel {
     display: block;
     margin: 0 0 5px 45px;
-    font-size: 20px;
+    font-size: 23px;
     color: #8a9a9a;
     font-weight: 900;
 }
@@ -34,3 +35,18 @@ input {
 .fieldInput {
     margin-left: 1em;
 }
+
+.billInputSpan {
+    font-family: 'IBM Plex Sans Arabic';
+    color: red;
+    font-size: 18px;
+    padding-left: 205px;
+}
+
+.numberOfPeopleInputSpan {
+    font-family: 'IBM Plex Sans Arabic';
+    color: red;
+    font-size: 18px;
+    padding-left: 50px;
+}
+

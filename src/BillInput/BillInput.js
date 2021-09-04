@@ -6,7 +6,6 @@ import peopleIcon from "../assets/icon-person.svg"
 
 
 export const BillInput = (props) => {
-    const {values} = props;
 
     const displayIcon = () => {
         if(props.label && props.label === "Bill") {
@@ -19,10 +18,10 @@ export const BillInput = (props) => {
     }
 
     return (
+        
     <div className="inputContainer"> 
-        <label className="inputLabel" htmlFor={props.value} > {props.label} </label>
+        <label className="inputLabel" htmlFor={props.value} > {props.label} <span className={`${props.name}InputSpan`} > <ErrorMessage name={props.name} /> </span> </label>
         <img className="icon" src={displayIcon()} alt="dollarSign"/>
-        <Field className="fieldInput" type="number" name={props.value} id={props.value} placeholder="" /> 
-        <ErrorMessage name={props.value} />
+        <Field className="fieldInput" type="number" name={props.name} id={props.name} placeholder="" /> 
     </div>     
     )}                

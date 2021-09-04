@@ -6,15 +6,12 @@ const TipAmountDisplayContainer = (props) => {
     const {bill, percentTip, numberOfPeople } = props.values
 
     const individualCostBeforeTip = bill / numberOfPeople
-    const individualTipAmount = individualCostBeforeTip * percentTip / 100
-    const individualCostIncludingTip = individualTipAmount + individualCostBeforeTip    
+    const individualTipAmount = bill && percentTip && numberOfPeople ? individualCostBeforeTip * percentTip / 100 : 0
+    const individualCostIncludingTip = bill && percentTip && numberOfPeople ? individualTipAmount + individualCostBeforeTip : 0   
 
-    const resetValues = () => {
-        props.resetValues()
-    }
     return (
         <div className="tipAmountDisplayContainer"> 
-            <TipAmountDisplay individualCostIncludingTip={individualCostIncludingTip} individualTipAmount={individualTipAmount} resetValues={resetValues}/>
+            <TipAmountDisplay individualCostIncludingTip={individualCostIncludingTip} individualTipAmount={individualTipAmount}/>
         </div>
     )
 }

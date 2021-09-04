@@ -1,0 +1,45 @@
+.TipAndTotalAmountDisplayContainer {
+    padding: 1em 0em 0em 1em;
+}
+
+.span {
+    font-size: 30px;
+    font-weight: bolder;
+    color: #3bb7aa;
+    position: relative;
+    top: 15px;
+    right: -95px;
+}
+
+.TotalSpan {
+    font-size: 30px;
+    font-weight: bolder;
+    position: relative;
+    color: #3bb7aa;
+    top: 15px;
+    right: -160px;
+}
+
+.TipAmount {
+    color:#c8eaed;
+    font-size: 23px;
+}
+.PerPerson {
+    margin-top: 5px;
+    font-size: 18px;
+    color: #598c91;
+}
+
+.resetButton {
+    margin: 30px 10px 0 10px;
+    width: 90%;
+    padding: 15px 0 15px 0;
+    font-size: 22px;
+    font-weight: 790;
+    letter-spacing: 1px;
+    background-color: #27c3ae;
+    color: #00625b;
+    border-radius: 10px;
+
+}
+

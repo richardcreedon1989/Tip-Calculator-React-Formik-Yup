@@ -1,7 +1,7 @@
 import './App.css';
 import { BillInput} from './BillInput/BillInput';
 import * as Yup from "yup"
-import {Formik, Form, } from "formik"
+import {Formik, Form } from "formik"
 import Header from "./Header/Header"
 import TipAmountDisplayContainer from "./TipAmountDisplayContainer/TipAmountDisplayContainer"
 import { TipPercentageButtonsContainer } from './TipPercentageButtons/TipPercentageButtonsContainer';
@@ -13,41 +13,29 @@ let initialValues = {
 }
 
 const validationSchema= Yup.object({
-  billAmount: Yup.string().required("Required")
+  bill: Yup.number().min(1, "Too Low").required("Required"),
+  percentTip: Yup.string().required("Required"),
+  numberOfPeople: Yup.number().min(1, "Too Low").required("Required")
 })
 
-const onSubmit = values => {
-  console.log("values", values)
-}
-
 function App(props) {
-
-  const resetValues = () => {
-    return initialValues = {
-      bill: "",
-      percentTip: "",
-      numberOfPeople: "",
-    }
-  }
-  
 
   return (
   <Formik
       initialValues={initialValues}
       validationSchema={validationSchema}
-      onSubmit={onSubmit}
+  
   > 
-  {({values}) => ( 
+  {({values, errors, touched, handleBlur, handleReset}) => ( //Ctrl + Space brings up options ie initialValues 
   
   <Form> 
-    <Header />      
+    <Header />         
     <div className="container"> 
-      <BillInput values={values} label="Bill" value="bill"/>
-      <TipPercentageButtonsContainer />
-      <BillInput values={values} label="Number Of People" value="numberOfPeople"/>
-      <TipAmountDisplayContainer values={values} resetValues={resetValues()}/>
+      <BillInput touched={touched} errors={errors} value={values} name="bill" label="Bill" />
+      <TipPercentageButtonsContainer touched={touched} errors={errors} />
+      <BillInput touched={touched} value={values} name="numberOfPeople" label="Number Of People"/>
+      <TipAmountDisplayContainer values={values} />
     </div>
-    {console.log("props", props)}
   </Form>
   )}  
                 
