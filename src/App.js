@@ -31,10 +31,16 @@ function App(props) {
   <Form> 
     <Header />         
     <div className="container"> 
-      <BillInput touched={touched} errors={errors} value={values} name="bill" label="Bill" />
-      <TipPercentageButtonsContainer touched={touched} errors={errors} />
-      <BillInput touched={touched} value={values} name="numberOfPeople" label="Number Of People"/>
-      <TipAmountDisplayContainer values={values} />
+        <div className="innerContainer"> 
+          <div  style={{order: "1"}}>  
+            <BillInput  touched={touched} errors={errors} value={values} name="bill" label="Bill" /> 
+            <TipPercentageButtonsContainer touched={touched} errors={errors} />
+            <BillInput touched={touched} value={values} name="numberOfPeople" label="Number Of People"/> 
+          </div>
+          <div style={{order: "2"}}> 
+            <TipAmountDisplayContainer style={{order: "4"}}  values={values} />
+          </div>
+        </div>
     </div>
   </Form>
   )}  

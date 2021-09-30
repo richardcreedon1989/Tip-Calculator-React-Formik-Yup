@@ -10,18 +10,20 @@ const TipAmountDisplay = (props) => {
         return props.individualTipAmount > 0 ? props.individualTipAmount.toFixed(2) : "0.00"
     }
     return (
-        <div className="TipAndTotalAmountDisplayContainer"> 
-            <div> 
-                <div className="TipAmount"> Tip Amount <span className="span"> $ {displayTipAmount()} </span> </div>
+        <>
+            <div className="TipAmountContainer"> 
+                <div className="TipAmount"> Tip Amount </div>
+                <div className="PerPerson"> /person </div>  
+            </div>
+            <span className="span"> $ {displayTipAmount()} </span> 
+            <div className="TotalContainer"> 
+                <div className="TipAmount"> Total </div>
                 <div className="PerPerson"> /person </div>
             </div>
-            <div> 
-                <div className="TipAmount"> Total <span className="TotalSpan"> $ {displayTotalAmount()} </span> </div>
-                <div className="PerPerson"> /person </div>
-            </div>
-            <button className="resetButton" type="reset"> RESET </button>
-        </div>
-        
+            <span className="TotalSpan"> $ {displayTotalAmount()} </span> 
+
+            <button className="resetButton" type="reset"> RESET </button> 
+        </>
     )
 }
 

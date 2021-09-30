@@ -18,10 +18,12 @@ export const BillInput = (props) => {
     }
 
     return (
-        
     <div className="inputContainer"> 
-        <label className="inputLabel" htmlFor={props.value} > {props.label} <span className={`${props.name}InputSpan`} > <ErrorMessage name={props.name} /> </span> </label>
+        <div className="labelContainer"> 
+            <label className="inputLabel" htmlFor={props.value} > {props.label} </label>
+            <span className="inputSpan" > <ErrorMessage name={props.name} /> </span>
+        </div>
         <img className="icon" src={displayIcon()} alt="dollarSign"/>
-        <Field className="fieldInput" type="number" name={props.name} id={props.name} placeholder="" /> 
+        <Field type="number" name={props.name} id={props.name} placeholder="" /> 
     </div>     
     )}                

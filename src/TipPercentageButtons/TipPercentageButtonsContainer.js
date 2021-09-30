@@ -16,20 +16,21 @@ const arrayOfTipInputComponents = [<TipPercentageButton percentage={percentage.f
     <TipPercentageButton percentage={percentage.ten} />,
     <TipPercentageButton percentage={percentage.fifteen} />,
     <TipPercentageButton percentage={percentage.twentyFive} />,
-    <TipPercentageButton percentage={percentage.fifty} />,
-    <TipPercentageInput percentage={percentage.custom} />]
+    <TipPercentageButton percentage={percentage.fifty} />,     
+    <TipPercentageInput percentage={percentage.custom} />
+]
 
 const displayTipPercentageButtons = () => {
     return arrayOfTipInputComponents.map((component, index)=> {
-            return <div key={index}> {component} </div>
+            return <div className="label" key={index}>  {component} </div>
         })
     }
 
 export const TipPercentageButtonsContainer = (props) => {
     return (
-        <div className="buttonsContainer"> 
-        <h1 className="heading"> Select Tip %</h1>
-        <div>{displayTipPercentageButtons()} </div>
-        </div>
+        <> 
+            <h1 className="heading"> Select Tip %</h1>
+            <div className="buttonsContainer">{displayTipPercentageButtons()} </div>
+        </>
     )
 }

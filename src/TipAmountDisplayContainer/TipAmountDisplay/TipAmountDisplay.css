@@ -1,45 +1,69 @@
-.TipAndTotalAmountDisplayContainer {
-    padding: 1em 0em 0em 1em;
-}
-
-.span {
-    font-size: 30px;
-    font-weight: bolder;
-    color: #3bb7aa;
-    position: relative;
-    top: 15px;
-    right: -95px;
-}
-
-.TotalSpan {
-    font-size: 30px;
-    font-weight: bolder;
-    position: relative;
-    color: #3bb7aa;
-    top: 15px;
-    right: -160px;
+.TipAmountContainer {
+  width: 60%;
+  order: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .TipAmount {
+  order: 1;
     color:#c8eaed;
-    font-size: 23px;
-}
-.PerPerson {
-    margin-top: 5px;
     font-size: 18px;
+    letter-spacing: 2px;
+    width: 100%;
+}
+
+.PerPerson {
+  order: 2;
+    margin-top: 5px;
+    font-size: 14px;
     color: #598c91;
 }
 
+.span {
+    order: 2;
+    margin-top: 10px;
+    display: inline-block;
+    width: 40%;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #3bb7aa;
+    text-align: right;
+}
+
+.TotalContainer {
+    margin-top: 20px;
+    order: 3;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.TotalSpan {
+  order: 4;
+  margin-top: 30px;
+  display: inline-block;
+  width: 40%;
+  font-size: 20px;
+  font-weight: bolder;
+  color: #3bb7aa;
+  text-align: right;
+  vertical-align: middle;
+}
+
+
+
 .resetButton {
+    order: 5;
     margin: 30px 10px 0 10px;
-    width: 90%;
+    width: 100%;
     padding: 15px 0 15px 0;
-    font-size: 22px;
+    font-size: 10px;
     font-weight: 790;
     letter-spacing: 1px;
     background-color: #27c3ae;
     color: #00625b;
     border-radius: 10px;
-
+    margin-bottom: 20px;
 }
 

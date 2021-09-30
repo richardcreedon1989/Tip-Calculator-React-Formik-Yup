@@ -3,16 +3,53 @@ input[type="number"]::placeholder {
 }
 
 .buttonsContainer {
-    margin-top: 2em;
-    margin-left: 2em;  
-    margin-bottom: -1.5em;
-    height: 250px;    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    box-sizing: border-box;
+    vertical-align: middle;
+    align-items: center;
 }
 
+.label {
+    display: inline-block;
+    width: 45%;
+    height: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    background-color: #004749;
+    border-style: none;
+    color:#def8fa;
+    font-size: 30px;
+    font-family: 'IBM Plex Sans Arabic';
+    line-height: .8;
+    font-weight: bolder;
+    border-radius: 5px;  
+}
+
+.label:nth-child(6) {
+  display: inline-block;
+  width: 45%;
+  height: 40px;
+  text-align: center;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  background-color: transparent;
+  border-style: none;
+  color:#def8fa;
+  font-size: 30px;
+  font-family: 'IBM Plex Sans Arabic';
+  line-height: .8;
+  font-weight: bolder;
+  border-radius: 5px;  
+}
 
 .heading {
     display: block;
-    margin: 0 0 5px 15px;
+    margin: 30px 0 10px 0px;
     font-size: 23px;
     color: #8a9a9a;
     font-weight: bolder;

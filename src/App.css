@@ -4,8 +4,24 @@ html,body {
 }
 
 .container {
-  height: 780px; 
   border-radius: 15px 15px 0px 0px;  
   background-color: #ffffff;
+  padding: 0 10% 0 10%;
+  display: flex;
+  justify-content: center;
 }
+
+.innerContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 280px;
+}
+
+/* @media screen and (min-width: 600px) {
+  
+  .innerContainer {
+    flex-direction: row;
+    max-width: 600px;
+  }
+} */
 
