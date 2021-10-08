@@ -15,12 +15,12 @@ const TipAmountDisplay = (props) => {
                 <div className="TipAmount"> Tip Amount </div>
                 <div className="PerPerson"> /person </div>  
             </div>
-            <span className="span"> $ {displayTipAmount()} </span> 
+            <span className="span"> $ {displayTotalAmount()}  </span> 
             <div className="TotalContainer"> 
                 <div className="TipAmount"> Total </div>
                 <div className="PerPerson"> /person </div>
             </div>
-            <span className="TotalSpan"> $ {displayTotalAmount()} </span> 
+            <span className="TotalSpan"> $ {displayTipAmount()} </span> 
 
             <button className="resetButton" type="reset"> RESET </button> 
         </>
